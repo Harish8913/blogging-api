@@ -6,7 +6,7 @@ const PORT = 3000;
 
 app.use('/', (req: Request, res: Response) => {
     console.log("Hey there")
-    return res.json({"harish": "puri"})
+    return res.status(200).json({message: "Harish"})
 })
 
 app.listen(PORT, () => {
