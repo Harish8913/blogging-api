@@ -1,14 +1,13 @@
 import express from 'express';
 import { Request, Response } from 'express';
+import { authController } from './controllers/auth.controller';
+import { authCheck } from './middlewares/auth.middlware';
+import config from './config/config';
 
 const app = express();
-const PORT = 3000;
 
-app.use('/', (req: Request, res: Response) => {
-    console.log("Hey there")
-    return res.status(200).json({message: "Harish"})
-})
+app.use('/', authCheck , authController)
 
-app.listen(PORT, () => {
-    console.log(`Server is running on PORT: ${PORT}`)
+app.listen(config.port, () => {
+    console.log(`Server is running on PORT: ${config.port}, MODE: ${config.nodeEnv}`)
 }) 
