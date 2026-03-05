@@ -1,12 +1,16 @@
 import express from 'express';
-import { Request, Response } from 'express';
 import { authController } from './controllers/auth.controller';
 import { authCheck } from './middlewares/auth.middlware';
 import config from './config/config';
+import { postUser } from './controllers/register.controller';
 
 const app = express();
 
-app.use('/', authCheck , authController)
+app.use(express.urlencoded());
+app.use(express.json());
+
+// app.use('/', authCheck , authController) 
+app.post('/api-register', postUser)
 
 app.listen(config.port, () => {
     console.log(`Server is running on PORT: ${config.port}, MODE: ${config.nodeEnv}`)
