@@ -1,5 +1,5 @@
-import { Request, Response, NextFunction } from "express";
-import config from "../config/config";
+import type { Request, Response, NextFunction } from "express";
+import config from "../config/config.ts";
 
 export const authCheck = (req:Request, res: Response, next: NextFunction) => {
     if(config.nodeEnv === 'development'){

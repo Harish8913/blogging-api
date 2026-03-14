@@ -1,4 +1,4 @@
-import { Request, Response } from "express"
+import type { Request, Response } from "express"
 
 export const authController = async (req: Request, res: Response) => {
     console.log("Hey there")

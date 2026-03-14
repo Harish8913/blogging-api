@@ -1,8 +1,6 @@
 import express from 'express';
-import { authController } from './controllers/auth.controller';
-import { authCheck } from './middlewares/auth.middlware';
-import config from './config/config';
-import { postUser } from './controllers/register.controller';
+import config from './config/config.ts';
+import { postUser } from './controllers/register.controller.ts';
 
 const app = express();
 
