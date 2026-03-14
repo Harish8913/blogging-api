@@ -1,5 +1,5 @@
 import type { Request, Response } from "express";
-import { RegisterPayload } from "../zod/payloads.ts";
+import { RegisterPayload } from "../zod/payloads.js";
 
 export const postUser = async (req: Request, res: Response) => {
   const data = RegisterPayload.safeParse(req.body);

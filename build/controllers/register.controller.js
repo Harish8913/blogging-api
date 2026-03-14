@@ -1,4 +1,4 @@
-import { RegisterPayload } from "../zod/payloads";
+import { RegisterPayload } from "../zod/payloads.js";
 export const postUser = async (req, res) => {
     const data = RegisterPayload.safeParse(req.body);
     if (!data.success) {

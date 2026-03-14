@@ -1,6 +1,6 @@
 import express from 'express';
-import config from './config/config';
-import { postUser } from './controllers/register.controller';
+import config from './config/config.js';
+import { postUser } from './controllers/register.controller.js';
 const app = express();
 app.use(express.urlencoded());
 app.use(express.json());

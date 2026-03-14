@@ -1,6 +1,6 @@
 import express from 'express';
-import config from './config/config.ts';
-import { postUser } from './controllers/register.controller.ts';
+import config from './config/config.js';
+import { postUser } from './controllers/register.controller.js';
 
 const app = express();
 
