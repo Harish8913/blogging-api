@@ -10,4 +10,4 @@ app.get("/", (req, res) => {
 app.listen(process.env.PORT, () => {
     console.log("SERVER IS ON: " + process.env.PORT);
 });
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=server.js.map
